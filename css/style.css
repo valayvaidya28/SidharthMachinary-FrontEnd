@@ -36,13 +36,83 @@ a,a:hover,a:focus {
     background:#1FB5AD;
     color:#fff;
 }
+.maincontent{
+    margin-left:280px;
+    margin-top:170px;
+}
+.content-window{
+    width:825px;
+    height:200px;
+    border:1px solid #fff;
+    border-radius:5px;
+    background-color:white;
+    margin-top:10px;
+    margin-bottom:10px;
+    box-shadow:0.5px 0.5px 1px 1px #888888;
+}
+.information{
+    margin-top:0px;
+    margin-left:20px;
+    font-size:15px;
+    font-weight: 1000;
+    font-family: 'Open Sans',sans-serif;
+}
+.date-info{
+    margin-left:-47px;
+    margin-bottom:25px;
+    font-size:20px;
+    font-weight: 1000;
+    font-family: 'Open Sans',sans-serif;
+}
 #container {
     width:100%;
     height:100%;
+    position:fixed;
+    margin-top: -170px;
+    box-shadow: 1px 1px 2px 2px #888888;
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
     -o-transition:all .3s ease-in-out;
     transition: all .3s ease-in-out;
+}
+
+.buttons button{
+    display:block;
+    float:left;
+}
+.btn {
+   float:left;
+   width:relative;
+   margin-left:533px;
+   margin-top:px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  background: #e02a48;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #7671c2;
+  text-decoration: none;
+}
+.li-class1{
+    text-decoration: none;
+}
+.li-class2{
+    margin-top:-36px;
+    margin-left:76px;
+    text-decoration: none;
+}
+.li-class3{
+    margin-left:181px;
+    margin-top:0px;
+    text-decoration: none;
 }
 /*login page*/
 .login-body {
@@ -210,7 +280,7 @@ ul.sidebar-menu,ul.sidebar-menu li ul.sub {
     padding:0;
 }
 ul.sidebar-menu {
-    margin-top:0px;
+    margin-top:-80px;
     padding-top:82px;
 
 }
@@ -325,7 +395,7 @@ ul.sidebar-menu li a.active i {
     margin-right:240px;
 }
 .fixed-top {
-    position:fixed;
+    position:relative;
     box-shadow:1px 0 3px rgba(0,0,0,.15);
 }
 .wrapper {

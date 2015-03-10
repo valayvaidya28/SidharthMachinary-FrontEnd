@@ -174,7 +174,42 @@
                         <button id="editable-sample_new" class="btn btn-primary">
                             Add New Opportunity <i class="fa fa-plus"></i>
                         </button>
+
                     </div>
+                    <br><br>
+                    <div class="text-left">
+                            <a href="#myModal" data-toggle="modal" class="btn btn-success">
+                                Generate Quotation
+                            </a>
+                    </div>
+                    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 class="modal-title">Generate Quotation</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label for="OpportunityNames">Select Opportunity Name for which Quotation is to be generated</label>
+                                                <select class="form-control" id="OpportunityNames" required>
+                                                    <option value="OPP1">Opportunity1</option>
+                                                    <option value="OPP2">Opportunity2</option>
+                                                    <option value="OPP3">Opportunity3</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="machineNos">Number of machines</label>
+                                                <input type="number" class="form-control" id="machineNos" placeholder="Enter the number of machines">
+                                            </div>
+                                            <button type="submit" class="btn btn-default">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     <table  class="display table table-bordered table-striped" id="dynamic-table">
                     <thead>
                     <tr>

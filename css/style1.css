@@ -2626,7 +2626,7 @@ ul.inbox-pagination li {
 
 .logo-print {
     float: left;
-    margin:-50px 0 0 250px;
+    margin:-50px 0 0 330px;
 }
 .invoice-header {
     border:1px solid #ddd;
@@ -2663,7 +2663,7 @@ ul.amounts li.grand-total {
     text-align:center;
     margin:0;
     text-transform:uppercase;
-    padding:5px;
+    padding:0px;
     letter-spacing:2px;
 }
 .invoice-list {

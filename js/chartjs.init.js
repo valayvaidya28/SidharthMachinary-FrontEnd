@@ -36,17 +36,17 @@
 
 
         var barChartData = {
-            labels : ["January","February","March","April","May","June","July"],
+            labels : ["January","February","March" ,"April","May","June","July"],
             datasets : [
                 {
                     fillColor : "#E67A77",
                     strokeColor : "#E67A77",
-                    data : [65,59,90,81,56,55,40]
+                    data : [65,59,90,80,81,56,55]
                 },
                 {
                     fillColor : "#79D1CF",
                     strokeColor : "#79D1CF",
-                    data : [28,48,40,19,96,27,100]
+                    data : [28,48,140,19,122,96,27]
                 }
             ]
 
@@ -83,8 +83,6 @@
             ]
         }
         var myLineChart = new Chart(document.getElementById("line-chart-js").getContext("2d")).Line(Linedata);
-
-
         var pieData = [
             {
                 value: 30,

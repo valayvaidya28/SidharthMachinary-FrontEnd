@@ -1,32 +1,20 @@
-Morris.Bar({
-    element: 'graph-bar',
-    data: [
-        {x: '2011 Q1', y: 3, z: 2, a: 3},
-        {x: '2011 Q2', y: 2, z: null, a: 1},
-        {x: '2011 Q3', y: 0, z: 2, a: 4},
-        {x: '2011 Q4', y: 2, z: 4, a: 3}
-    ],
-    xkey: 'x',
-    ykeys: ['y', 'z', 'a'],
-    labels: ['Y', 'Z', 'A'],
-    barColors:['#E67A77','#D9DD81','#79D1CF']
 
-
-});
 
 
 
 var day_data = [
-    {"elapsed": "I", "value": 34},
-    {"elapsed": "II", "value": 24},
-    {"elapsed": "III", "value": 3},
-    {"elapsed": "IV", "value": 12},
-    {"elapsed": "V", "value": 13},
-    {"elapsed": "VI", "value": 22},
-    {"elapsed": "VII", "value": 5},
-    {"elapsed": "VIII", "value": 26},
-    {"elapsed": "IX", "value": 12},
-    {"elapsed": "X", "value": 19}
+    {"elapsed": "Jan", "value": 34},
+    {"elapsed": "Feb", "value": 24},
+    {"elapsed": "Mar", "value": 3},
+    {"elapsed": "Apr", "value": 12},
+    {"elapsed": "May", "value": 13},
+    {"elapsed": "June", "value": 22},
+    {"elapsed": "Jul", "value": 5},
+    {"elapsed": "Aug", "value": 26},
+    {"elapsed": "Sep", "value": 12},
+    {"elapsed": "Oct", "value": 19},
+    {"elapsed": "Nov", "value": 26},
+    {"elapsed": "Dec", "value": 12}
 ];
 Morris.Line({
     element: 'graph-line',
@@ -42,24 +30,7 @@ Morris.Line({
 
 
 // Use Morris.Area instead of Morris.Line
-Morris.Area({
-    element: 'graph-area-line',
-    behaveLikeLine: false,
-    data: [
-        {x: '2011 Q1', y: 3, z: 3},
-        {x: '2011 Q2', y: 2, z: 1},
-        {x: '2011 Q3', y: 2, z: 4},
-        {x: '2011 Q4', y: 3, z: 3},
-        {x: '2011 Q5', y: 3, z: 4}
-    ],
-    xkey: 'x',
-    ykeys: ['y', 'z'],
-    labels: ['Y', 'Z'],
-    lineColors:['#E67A77','#79D1CF']
 
-
-
-});
 
 
 

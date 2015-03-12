@@ -730,7 +730,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     transition:all .3s ease-in-out;
 }
 .merge-left {
-    margin-left:0px !important;
+    margin-left:45px !important;
 }
 .hide-right-bar {
     margin-right:-240px !important;
@@ -2626,7 +2626,7 @@ ul.inbox-pagination li {
 
 .logo-print {
     float: left;
-    margin:-50px 0 0 330px;
+    margin:-50px 0 0 391px;
 }
 .invoice-header {
     border:1px solid #ddd;

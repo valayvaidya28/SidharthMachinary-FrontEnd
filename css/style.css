@@ -41,7 +41,7 @@ a,a:hover,a:focus {
     margin-top:170px;
 }
 .content-window{
-    width:825px;
+    width:77%;
     height:200px;
     border:1px solid #fff;
     border-radius:5px;
@@ -63,6 +63,13 @@ a,a:hover,a:focus {
     font-size:20px;
     font-weight: 1000;
     font-family: 'Open Sans',sans-serif;
+}
+
+@media(min-width:1066px) {
+    .info-content{
+
+    }
+
 }
 #container {
     width:100%;
@@ -100,19 +107,6 @@ a,a:hover,a:focus {
 .btn:hover {
   background: #7671c2;
   text-decoration: none;
-}
-.li-class1{
-    text-decoration: none;
-}
-.li-class2{
-    margin-top:-36px;
-    margin-left:76px;
-    text-decoration: none;
-}
-.li-class3{
-    margin-left:181px;
-    margin-top:0px;
-    text-decoration: none;
 }
 /*login page*/
 .login-body {

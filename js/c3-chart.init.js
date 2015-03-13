@@ -5,18 +5,18 @@ var chart = c3.generate({
 
     data: {
     columns: [
-    ['data1', 30, 200, 100, 400, 150, 250],
-    ['data2', 50, 20, 10, 40, 15, 25]
+    ['LiveLeads', 30,200,100,400,150, 250,234,23,234,4],
+    ['DeadLeads', 50,20,10,40,15, 25,22,33,44,55,33,22]
     ],
     types: {
-    data1: 'line',
-    data2: 'line'
+    LiveLeads: 'line',
+    DeadLeads: 'line'
     }
 },
 
 axis: {
     x: {
-    type: 'categorized'
+        type: 'categorized'
     }
 }
 
@@ -60,8 +60,8 @@ var chart = c3.generate({
         bindto: '#roated-chart',
         data: {
         columns: [
-        ['data1', 30, 200, 100, 400, 150, 250],
-        ['data2', 50, 20, 10, 40, 15, 25]
+        ['data1', 30, 200, 100, 400, 150, 250,234,23,234,4,44,22],
+        ['data2', 50, 20, 10, 40, 15, 25,22,33,44,55,33,22]
         ],
         types: {
         data1: 'bar'

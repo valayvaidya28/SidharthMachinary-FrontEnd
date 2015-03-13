@@ -16,6 +16,20 @@
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-reset.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap-switch.css" />
+    <link rel="stylesheet" type="text/css" href="js/bootstrap-fileupload/bootstrap-fileupload.css" />
+    <link rel="stylesheet" type="text/css" href="js/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+
+    <link rel="stylesheet" type="text/css" href="js/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="js/bootstrap-timepicker/css/timepicker.css" />
+    <link rel="stylesheet" type="text/css" href="js/bootstrap-colorpicker/css/colorpicker.css" />
+    <link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+    <link rel="stylesheet" type="text/css" href="js/bootstrap-datetimepicker/css/datetimepicker.css" />
+
+    <link rel="stylesheet" type="text/css" href="js/jquery-multi-select/css/multi-select.css" />
+    <link rel="stylesheet" type="text/css" href="js/jquery-tags-input/jquery.tagsinput.css" />
+
+    <link rel="stylesheet" type="text/css" href="js/select2/select2.css" />
 
     <!--dynamic table-->
     <link href="js/advanced-datatable/css/demo_page.css" rel="stylesheet" />
@@ -202,7 +216,7 @@
                         <td>Branch1</td>
                         <td>abad</td>
                         <td>Temp remarks</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -215,7 +229,7 @@
                         <td>Branch1</td>
                         <td>abad</td>
                         <td>Temp remarks</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr><tr class="gradeX">
                         <td>9-10-11</td>
@@ -227,7 +241,7 @@
                         <td>Branch1</td>
                         <td>abad</td>
                         <td>Temp remarks</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     </tbody>
@@ -247,6 +261,112 @@
                     </tr>
                     </tfoot>
                     </table>
+                    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-1" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 class="modal-title">Edit Setup</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group ">
+                                        <label for="contactCompany" class="control-label col-lg-3">Company</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="contactCompany" required>
+                                                <option value="C1">company1</option>
+                                                <option value="C2">company2</option>
+                                                <option value="C3">company3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="manufacturer" class="control-label col-lg-3">Manufacturer</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="manufacturer" type="text" name="manufacturer" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="place" class="control-label col-lg-3">Place</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="place" type="text" name="place" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Installation Date</label>
+                                        <div class="col-md-6 col-xs-11">
+                                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                                            <!-- <span class="help-block">Select date</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="mname" class="control-label col-lg-3">Machine Name</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="mname" type="text" name="machine" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="mmodel" class="control-label col-lg-3">Model</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="mmodel" type="text" name="model"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="msize" class="control-label col-lg-3">Size</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="msize" type="text" name="size"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="mhead" class="control-label col-lg-3">Head</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="mhead" type="text" name="head"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="mno" class="control-label col-lg-3">Machine Number</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="mno" type="text" name="mnumber"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="warranty" class="control-label col-lg-3">Warranty Status</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="warranty" type="text" name="warranty"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="mink" class="control-label col-lg-3">Ink</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="mink" type="text" name="ink"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="msoftware" class="control-label col-lg-3">Software</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="msoftware" type="text" name="software"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="mremarks" class="control-label col-lg-3">Remarks</label>
+                                        <div class="col-lg-6">
+                                            <textarea class="form-control " id="mremarks" name="mremarks"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     </div>
                 </section>
@@ -263,6 +383,14 @@
 <script src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/jquery.scrollTo.min.js"></script>
 <script src="js/jquery.nicescroll.js"></script>
+<script src="js/bootstrap-switch.js"></script>
+
+<script type="text/javascript" src="js/fuelux/js/spinner.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+<script type="text/javascript" src="js/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+<script type="text/javascript" src="js/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+
+<script type="text/javascript" src="js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
 
 <script type="text/javascript" language="javascript" src="js/advanced-datatable/js/jquery.dataTables.js"></script>
@@ -272,6 +400,9 @@
 
 <!--dynamic table initialization -->
 <script src="js/dynamic_table_init.js"></script>
+<script src="js/toggle-init.js"></script>
+
+<script src="js/advanced-form.js"></script>
 </body>
 
 <!-- Mirrored from bucketadmin.themebucket.net/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Jul 2014 11:12:48 GMT -->

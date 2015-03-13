@@ -233,7 +233,7 @@
                         <td>User1</td>
                         <td>Active</td>
                         <td>9-11-11</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -244,7 +244,7 @@
                         <td>User1</td>
                         <td>Active</td>
                         <td>9-11-11</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -255,7 +255,7 @@
                         <td>User1</td>
                         <td>Active</td>
                         <td>9-11-11</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     </tbody>
@@ -273,6 +273,139 @@
                     </tr>
                     </tfoot>
                     </table>
+                    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-1" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 class="modal-title">Edit Opportunity</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group ">
+                                        <label for="oppName" class="control-label col-lg-3">Opportunity Name</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="oppName" type="text" name="oppName" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="contactCompany" class="control-label col-lg-3">Company</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" id="contactCompany" onchange="reloadForm()" required>
+                                                <option value="C1">company1</option>
+                                                <option value="C2">company2</option>
+                                                <option value="C3">company3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="OpportunityForm" class="control-label col-lg-3">Lead</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" id="OpportunityForm" required>
+                                                <option value="L1">Lead 1 of the selected company</option>
+                                                <option value="L2">Lead 2 of the selected company</option>
+                                                <option value="L3">Lead 3 of the selected company</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="cbranch" class="control-label col-lg-3">Branch</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" id="cbranch" required>
+                                                <option value="GJ">Gujarat</option>
+                                                <option value="MH">Maharashtra</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Creation Date</label>
+                                        <div class="col-md-6 col-xs-11">
+                                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                                            <!-- <span class="help-block">Select date</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="suser" class="control-label col-lg-3">Sourced By</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" id="suser" required>
+                                                <option value="U1">User1</option>
+                                                <option value="U2">User2</option>
+                                                <option value="U3">User3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="oppstatus" class="control-label col-lg-3">Status</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control" id="oppstatus" required>
+                                                <option value="IN">Initial</option>
+                                                <option value="QT">Quoted</option>
+                                                <option value="NG">Negotiation</option>
+                                                <option value="OR">Order Received</option>
+                                                <option value="OL">Order Lost</option>
+                                                <option value="DD">Dead</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="oppstage" class="control-label col-lg-3">Stage</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="oppstage" required>
+                                                <option value="HT">Hot</option>
+                                                <option value="WM">Warm</option>
+                                                <option value="CD">Cold</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="lsource" class="control-label col-lg-3">Source</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="lsource" required>
+                                                <option value="S1">Source1</option>
+                                                <option value="S2">Source2</option>
+                                                <option value="S3">Source3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="amt" class="control-label col-lg-3">Total Amount</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="amt" type="number" name="amount" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="poi" class="control-label col-lg-3">Product of Interest</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="poi" type="text" name="interest" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Approx. Closing date</label>
+                                        <div class="col-md-6 col-xs-11">
+                                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                                            <!-- <span class="help-block">Select date</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="oremarks" class="control-label col-lg-3">Remarks</label>
+                                        <div class="col-lg-6">
+                                            <textarea class="form-control " id="oremarks" name="oremarks"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     </div>
                 </section>

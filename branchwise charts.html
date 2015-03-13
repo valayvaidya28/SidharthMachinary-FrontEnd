@@ -8,29 +8,23 @@
     <meta name="description" content="">
     <meta name="author" content="Sidharth Machinaries">
     <link rel="shortcut icon" href="images/favicon.html">
-    <title>Branchwise Charts</title>
+    <title>Companies</title>
     <!--Core CSS -->
+    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <!--clock css-->
     <link href="js/css3clock/css/style.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet"/>
-    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="js/morris-chart/morris.css">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet" />
-
+    <link href="js/c3-chart/c3.css" rel="stylesheet"/>
 </head>
-<body style="background-color:#f1f2f7">
+<body>
 <section id="container">
 <!--header start-->
 <header class="header fixed-top clearfix">
 <!--logo start-->
-<div class="brand" style="background-color:white">
+<div class="brand">
     <a href="index.html" class="logo">
         <img src="images/logo1.png" alt="">
     </a>
@@ -43,7 +37,9 @@
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
-        
+        <li>
+            <input type="text" class="form-control search" placeholder=" Search">
+        </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -151,87 +147,56 @@
     </div>
 </aside>
 <!--sidebar end-->
-</section>
-<!--Main panel starts -->
-<div class="maincontent">
-  <div class="form-group">
-        <div class="control-label col-lg-3" style="margin-top:-5.4%;margin-left:30%;margin-right:-18%;z-index:-1000"><h4><b>Branch:</b></h4></div>
-        <div class="col-lg-6" style="width:22%;margin-top:-3.22%;margin-left:38%">
-            <select class="form-control" id="contactCompany" style="margin-top:-10%">
-                <option value="C1">Branch 1</option>
-                <option value="C2">Branch 2</option>
-                <option value="C3">Branch 3</option>
-            </select>
-        </div>
+<section id="main-content">
+    <div class="dropdown" style="z-index:1;margin-left:-30%">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width:11%;margin-top:6.6%;margin-left:50%">
+        Branch
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="margin-left:50%;margin-top:0%">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Branch 1</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Branch 2</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Branch 3</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Branch 4</a></li>
+      </ul>
     </div>
-  <!--   <li class="dropdown" style="margin-left:84%;margin-bottom:-4%;">
-        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-            <span class="username" style="z-index:-1000">Branch</span>
-            <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu extended logout">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Log Out</a></li>
-        </ul>
-    </li> -->
-    <section class="wrapper" style="width:100%;margin-top:7.3%">
-         <!-- page start-->
-             <div class="row" style="margin-top:inherit">
-             <div class="col-sm-12" style="margin-left:-35px;margin-top:-156px;z-index:-1000">
-                 <section class="panel">
-                     <header class="panel-heading">
-                         Monthly Report
-                     </header>
-                     <div class="panel-body">
-                         <div>
-                             
-                                 <div class="legendColorBox" style="margin-top:0.2%;margin-left:43%;">
-                                     <div style="border:1px solid #ccc;padding:1px;width:14px">
-                                         <div style="width:4px;height:0;border:5px solid #E67A77 ;overflow:hidden">
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="legendLabel" style="margin-top:-17px;margin-left:45%">Opportunities</div>
-                             
-                             
-                                 <div class="legendColorBox" style="margin-top:1%;margin-left:43%">
-                                     <div style="border:1px solid #ccc;padding:1px;width:14px">
-                                         <div style="width:4px;height:0;border:5px solid #79D1CF ;overflow:hidden">
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="legendLabel" style="margin-top:-1.7%;margin-left:45%">Leads</div> 
-                             
-                         </div>
-                         <div class="chartJS">
-                             <canvas id="bar-chart-js" height="250" width="800" ></canvas>
-                         </div>
-                     </div>
-                 </section>
-             </div>
-         </div>
-             <div class="row">
-                 <div class="col-sm-12" style="margin-left:-35px;z-index:-1000">
-                     <section class="panel">
-                         <header class="panel-heading">
-                             Area Chart
-                         </header>
-                         <div class="panel-body">
-                             <div class="chartJS">
-                                 <canvas id="line-chart-js" height="250" width="800" ></canvas>
-                             </div>
-                         </div>
-                     </section>
-                 </div>
-             </div>
-           
-         <!-- page end-->
-         </section>
-   
-</div>
-
-<!-- Main panel ends -->
+      <section class="wrapper" style="width:100%;margin-top:-5.7%">
+           <!-- page start-->
+               <div class="row" style="margin-top:20%;margin-left:3%">
+               <div class="col-sm-12" style="margin-left:-35px;margin-top:-156px;z-index:-1000">
+                   <section class="panel">
+                       <header class="panel-heading">
+                          Opportnity vs Leads - Branch
+                       </header>
+                       <div class="panel-body">
+                           <div>
+                               
+                                   <div class="legendColorBox" style="margin-top:0.2%;margin-left:43%;">
+                                       <div style="border:1px solid #ccc;padding:1px;width:14px">
+                                           <div style="width:4px;height:0;border:5px solid #E67A77 ;overflow:hidden">
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="legendLabel" style="margin-top:-17px;margin-left:45%">Opportunities</div>
+                               
+                               
+                                   <div class="legendColorBox" style="margin-top:1%;margin-left:43%">
+                                       <div style="border:1px solid #ccc;padding:1px;width:14px">
+                                           <div style="width:4px;height:0;border:5px solid #79D1CF ;overflow:hidden">
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="legendLabel" style="margin-top:-1.7%;margin-left:45%">Leads</div> 
+                               
+                           </div>
+                           <div class="chartJS">
+                               <canvas id="bar-chart-js" height="250" width="800" ></canvas>
+                           </div>
+                       </div>
+                   </section>
+               </div>
+           </div>
+</section>
 
 <!-- Placed js at the end of the document so the pages load faster -->
 <!--Core js-->

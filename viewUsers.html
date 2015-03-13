@@ -195,7 +195,7 @@
                         <td>1234567890</td>
                         <td>COH</td>
                         <td>Yes</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="edit" href="">Change Password</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
@@ -205,7 +205,7 @@
                         <td>1234567890</td>
                         <td>COH</td>
                         <td>Yes</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="edit" href="">Change Password</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
@@ -215,7 +215,7 @@
                         <td>1234567890</td>
                         <td>COH</td>
                         <td>Yes</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="edit" href="">Change Password</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
@@ -233,6 +233,89 @@
                     </tr>
                     </tfoot>
                     </table>
+                    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-1" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 class="modal-title">Edit User</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group ">
+                                        <label for="UserName" class="control-label col-lg-3">Full Name</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="UserName" type="text" name="FullName" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="uemail" class="control-label col-lg-3">Email-Id</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="uemail" type="email" name="useremail" required/>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="form-group ">
+                                        <label for="pass" class="control-label col-lg-3">Password</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="pass" type="password" name="password" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="cpass" class="control-label col-lg-3">Confirm Password</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="cpass" type="password" name="confirmPassword" required/>
+                                        </div>
+                                    </div> -->
+                                    <div class="form-group ">
+                                        <label for="umobile" class="control-label col-lg-3">Mobile</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="umobile" type="number" name="umobile"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="uactive" class="control-label col-lg-3">Active</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="uactive" required>
+                                                <option value="Y">Yes</option>
+                                                <option value="N">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="urole" class="control-label col-lg-3">Role</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="urole" required>
+                                                <option value="SAE">SAE</option>
+                                                <option value="BRH">BRH</option>
+                                                <option value="COH">COH</option>
+                                                <option value="ADM">ADM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="ubranch" class="control-label col-lg-3">Branch</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="ubranch" required>
+                                                <option value="B1">Branch1</option>
+                                                <option value="B2">Branch2</option>
+                                                <option value="B3">Branch3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     </div>
                 </section>

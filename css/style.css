@@ -95,11 +95,11 @@ a,a:hover,a:focus {
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
   border-radius: 5px;
-  text-shadow: 1px 1px 3px #666666;
+  text-shadow: 0x 0px 0px #666666;
   font-family: Arial;
-  color: #ffffff;
+  color:grey;
   font-size: 12px;
-  background: #e02a48;
+  background: white;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }

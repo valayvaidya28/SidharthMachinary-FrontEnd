@@ -38,35 +38,16 @@
         var barChartData = {
             labels : ["January","February","March" ,"April","May","June","July", "August","September", "October", "November", "December"],
             datasets : [
-                {
-                    fillColor : "#E67A77",
-                    strokeColor : "#E67A77",
-                    data : [65,59,90,80,81,56,55,33,56,31,44,42]
-                },
-                {
-                    fillColor : "#79D1CF",
-                    strokeColor : "#79D1CF",
-                    data : [28,48,40,19,96,27,100,33,55,66,33,22]
-                }
+               {
+                   fillColor : "#79D1CF",
+                   strokeColor : "#79D1CF",
+                   data : [28,48,40,19,96,27,100,33,55,66,33,22]
+               }
             ]
 
         }
 
-        var myLine = new Chart(document.getElementById("bar-chart-js").getContext("2d")).Bar(barChartData);
-
-        var barChart = {
-            labels : ["January","February","March" ,"April","May","June","July", "August","September", "October", "November", "December"],
-            datasets : [
-                {
-                    fillColor : "#E67A77",
-                    strokeColor : "#E67A77",
-                    data : [65,59,90,80,81,56,55,33,56,31,44,42]
-                },
-            ]
-
-        }
-
-        var myData = new Chart(document.getElementById("bar-chart-js1").getContext("2d")).Bar(barChart);
+        var myLine = new Chart(document.getElementById("bar-chart-js1").getContext("2d")).Bar(barChartData);
 
 
         var Linedata = {

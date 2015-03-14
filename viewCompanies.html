@@ -25,6 +25,31 @@
     <!-- Custom styles for this template -->
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function populateForm(id) {
+            var Company = document.getElementById("row"+1).cells[0].innerHTML;
+            var Owner = document.getElementById("row"+1).cells[1].innerHTML;
+            var Email = document.getElementById("row"+1).cells[2].innerHTML;
+            var Phone = document.getElementById("row"+1).cells[3].innerHTML;
+            var Mobile = document.getElementById("row"+1).cells[4].innerHTML;
+            var City = document.getElementById("row"+1).cells[5].innerHTML;
+            var Type = document.getElementById("row"+1).cells[6].innerHTML;
+            var Branch = document.getElementById("row"+1).cells[7].innerHTML;
+            var Source = document.getElementById("row"+1).cells[8].innerHTML;
+            var Segment = document.getElementById("row"+1).cells[9].innerHTML;
+            document.getElementById("cname").value = Company;
+            document.getElementById("coname").value = Owner;
+            document.getElementById("cemail").value = Email;
+            document.getElementById("cbphone").value = Phone;
+            document.getElementById("cmobile").value = Mobile;
+            document.getElementById("ccity").value = City;
+            document.getElementById("ctype").value = Type;
+            document.getElementById("cbranch").value = Branch;
+            document.getElementById("csource").value = Source;
+            document.getElementById("csegment").value = Segment;
+
+        } 
+    </script>
 </head>
 <body>
 <section id="container">
@@ -193,18 +218,18 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="gradeX">
-                        <td>Company1</td>
-                        <td>Owner1</td>
-                        <td>Owner@gmail.com</td>
-                        <td>1234567890</td>
-                        <td>1234567890</td>
-                        <td>city1</td>
-                        <td>Lead</td>
-                        <td>Branch1</td>
-                        <td>Source1</td>
-                        <td>Signage</td>
-                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
+                    <tr class="gradeX" id = "row1">
+                        <td id="company1">Company1</td>
+                        <td id="owner1">Owner1</td>
+                        <td id="email1">Owner@gmail.com</td>
+                        <td id="phone1">1234567890</td>
+                        <td id="mobile1">1234567890</td>
+                        <td id="city1">city1</td>
+                        <td id="type1">Lead</td>
+                        <td id="branch1">Maharashtra</td>
+                        <td id="source1">Source1</td>
+                        <td id="segment1">Packaging</td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal" onclick="populateForm(this.id)">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -271,9 +296,9 @@
                                         <label for="ctype" class="control-label col-lg-3">Type</label>
                                         <div class="col-lg-3">
                                             <select class="form-control"  id="ctype" required>
-                                                <option value="OMH">Our Machine Holder</option>
-                                                <option value="PR">Prospect</option>
-                                                <option value="LD">Lead</option>
+                                                <option value="Our Machine Holder">Our Machine Holder</option>
+                                                <option value="Prospect">Prospect</option>
+                                                <option value="Lead">Lead</option>
                                             </select>
                                         </div>
                                     </div>
@@ -285,8 +310,8 @@
                                         <label for="cbranch" class="control-label col-lg-3">Branch</label>
                                         <div class="col-lg-3">
                                             <select class="form-control"  id="cbranch" required>
-                                                <option value="GJ">Gujarat</option>
-                                                <option value="MH">Maharashtra</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Maharashtra">Maharashtra</option>
                                             </select>
                                         </div>
                                     </div>
@@ -354,15 +379,15 @@
                                         <label for="csource" class="control-label col-lg-3">Source</label>
                                         <div class="col-lg-3">
                                             <select class="form-control"  id="csource" required>
-                                                <option value="AG">Agent</option>
-                                                <option value="EX">Exhibition</option>
+                                                <option value="Agent">Agent</option>
+                                                <option value="Exhibition">Exhibition</option>
                                             </select>
                                         </div>
                                         <label for="csegment" class="control-label col-lg-3">Segment</label>
                                         <div class="col-lg-3">
                                             <select class="form-control"  id="csegment" required>
-                                                <option value="SG">Signage</option>
-                                                <option value="PK">Packaging</option>
+                                                <option value="Signage">Signage</option>
+                                                <option value="Packaging">Packaging</option>
                                             </select>
                                         </div>
                                     </div>

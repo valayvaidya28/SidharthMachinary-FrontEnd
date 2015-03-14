@@ -25,6 +25,20 @@
     <!-- Custom styles for this template -->
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function populateForm(id) {
+            var values = [];
+            for(var i = 0; i < 6; i++) {
+                values[i] = document.getElementById("row"+id).cells[i].innerHTML; 
+            }
+            document.getElementById("contactCompany").value = values[0];
+            document.getElementById("status").value = values[1];
+            document.getElementById("assigned").value = values[3];
+            document.getElementById("branch").value = values[4];
+            document.getElementById("lsource").value = values[5];
+            
+        } 
+    </script>
 </head>
 <body>
 <section id="container">
@@ -189,14 +203,14 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="gradeX">
-                        <td>Company1</td>
-                        <td>Active</td>
+                    <tr class="gradeX" id = "row1">
+                        <td>company2</td>
+                        <td>New</td>
                         <td>9-10-11</td>
-                        <td>User1</td>
-                        <td>Branch1</td>
-                        <td>Source1</td>
-                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
+                        <td>User2</td>
+                        <td>Branch2</td>
+                        <td>Source2</td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal" id = "1" onclick="populateForm(this.id)">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -247,9 +261,9 @@
                                         <label for="contactCompany" class="control-label col-lg-3">Company</label>
                                         <div class="col-lg-6">
                                             <select class="form-control"  id="contactCompany" required>
-                                                <option value="C1">company1</option>
-                                                <option value="C2">company2</option>
-                                                <option value="C3">company3</option>
+                                                <option value="company1">company1</option>
+                                                <option value="company2">company2</option>
+                                                <option value="company3">company3</option>
                                             </select>
                                         </div>
                                     </div>
@@ -257,9 +271,9 @@
                                         <label for="assigned" class="control-label col-lg-3">Assigned To</label>
                                         <div class="col-lg-6">
                                             <select class="form-control"  id="assigned" required>
-                                                <option value="U1">User1</option>
-                                                <option value="U2">User2</option>
-                                                <option value="U3">User3</option>
+                                                <option value="User1">User1</option>
+                                                <option value="User2">User2</option>
+                                                <option value="User3">User3</option>
                                             </select>
                                         </div>
                                     </div>
@@ -267,10 +281,10 @@
                                         <label for="status" class="control-label col-lg-3">Status</label>
                                         <div class="col-lg-6">
                                             <select class="form-control"  id="status" required>
-                                                <option value="NW">New</option>
-                                                <option value="AC">Active</option>
-                                                <option value="CL">Closed</option>
-                                                <option value="CT">Converted</option>
+                                                <option value="New">New</option>
+                                                <option value="Active">Active</option>
+                                                <option value="Closed">Closed</option>
+                                                <option value="Converted">Converted</option>
                                             </select>
                                         </div>
                                     </div>
@@ -278,9 +292,9 @@
                                         <label for="branch" class="control-label col-lg-3">Branch</label>
                                         <div class="col-lg-6">
                                             <select class="form-control"  id="branch" required>
-                                                <option value="B1">Branch1</option>
-                                                <option value="B2">Branch2</option>
-                                                <option value="B3">Branch3</option>
+                                                <option value="Branch1">Branch1</option>
+                                                <option value="Branch2">Branch2</option>
+                                                <option value="Branch3">Branch3</option>
                                             </select>
                                         </div>
                                     </div>
@@ -288,9 +302,9 @@
                                         <label for="lsource" class="control-label col-lg-3">Source</label>
                                         <div class="col-lg-6">
                                             <select class="form-control"  id="lsource" required>
-                                                <option value="S1">Source1</option>
-                                                <option value="S2">Source2</option>
-                                                <option value="S3">Source3</option>
+                                                <option value="Source1">Source1</option>
+                                                <option value="Source2">Source2</option>
+                                                <option value="Source3">Source3</option>
                                             </select>
                                         </div>
                                     </div>

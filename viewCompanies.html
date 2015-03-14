@@ -27,16 +27,16 @@
     <link href="css/style-responsive.css" rel="stylesheet" />
     <script type="text/javascript">
         function populateForm(id) {
-            var Company = document.getElementById("row"+1).cells[0].innerHTML;
-            var Owner = document.getElementById("row"+1).cells[1].innerHTML;
-            var Email = document.getElementById("row"+1).cells[2].innerHTML;
-            var Phone = document.getElementById("row"+1).cells[3].innerHTML;
-            var Mobile = document.getElementById("row"+1).cells[4].innerHTML;
-            var City = document.getElementById("row"+1).cells[5].innerHTML;
-            var Type = document.getElementById("row"+1).cells[6].innerHTML;
-            var Branch = document.getElementById("row"+1).cells[7].innerHTML;
-            var Source = document.getElementById("row"+1).cells[8].innerHTML;
-            var Segment = document.getElementById("row"+1).cells[9].innerHTML;
+            var Company = document.getElementById("row"+id).cells[0].innerHTML;
+            var Owner = document.getElementById("row"+id).cells[1].innerHTML;
+            var Email = document.getElementById("row"+id).cells[2].innerHTML;
+            var Phone = document.getElementById("row"+id).cells[3].innerHTML;
+            var Mobile = document.getElementById("row"+id).cells[4].innerHTML;
+            var City = document.getElementById("row"+id).cells[5].innerHTML;
+            var Type = document.getElementById("row"+id).cells[6].innerHTML;
+            var Branch = document.getElementById("row"+id).cells[7].innerHTML;
+            var Source = document.getElementById("row"+id).cells[8].innerHTML;
+            var Segment = document.getElementById("row"+id).cells[9].innerHTML;
             document.getElementById("cname").value = Company;
             document.getElementById("coname").value = Owner;
             document.getElementById("cemail").value = Email;

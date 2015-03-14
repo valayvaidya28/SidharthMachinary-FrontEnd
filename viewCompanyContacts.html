@@ -29,7 +29,7 @@
         function populateForm(id) {
             var values = [];
             for(var i = 0; i < 7; i++) {
-                values[i] = document.getElementById("row"+1).cells[i].innerHTML; 
+                values[i] = document.getElementById("row"+id).cells[i].innerHTML; 
             }
             document.getElementById("contactCompany").value = values[0];
             document.getElementById("contactName").value = values[1];

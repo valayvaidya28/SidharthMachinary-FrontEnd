@@ -25,6 +25,22 @@
     <!-- Custom styles for this template -->
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function populateForm(id) {
+            var values = [];
+            for(var i = 0; i < 7; i++) {
+                values[i] = document.getElementById("row"+1).cells[i].innerHTML; 
+            }
+            document.getElementById("contactCompany").value = values[0];
+            document.getElementById("contactName").value = values[1];
+            document.getElementById("cdesig").value = values[2];
+            document.getElementById("bphone").value = values[3];
+            document.getElementById("pphone").value = values[4];
+            document.getElementById("mobile").value = values[5];
+            document.getElementById("ccemail").value = values[6];
+
+        } 
+    </script>
 </head>
 <body>
 <section id="container">
@@ -190,19 +206,19 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="gradeX">
-                        <td>Company2</td>
+                    <tr class="gradeX" id = "row1">
+                        <td>company2</td>
                         <td>Contact1</td>
                         <td>Head</td>
                         <td>1234567890</td>
                         <td>1234567890</td>
                         <td>1234567890</td>
                         <td>contact1@gmail.com</td>
-                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal" id="1" onclick="populateForm(this.id)">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
-                        <td>Company2</td>
+                        <td>company2</td>
                         <td>Contact1</td>
                         <td>Head</td>
                         <td>1234567890</td>
@@ -252,9 +268,9 @@
                                         <label for="contactCompany" class="control-label col-lg-3">Company</label>
                                         <div class="col-lg-6">
                                             <select class="form-control"  id="contactCompany" required>
-                                                <option value="C1">company1</option>
-                                                <option value="C2">company2</option>
-                                                <option value="C3">company3</option>
+                                                <option value="company1">company1</option>
+                                                <option value="company2">company2</option>
+                                                <option value="company3">company3</option>
                                             </select>
                                         </div>
                                     </div>

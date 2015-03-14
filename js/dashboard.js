@@ -492,7 +492,7 @@ if (Gauge) {
     var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
     gauge.maxValue = 25; // set max gauge value
     gauge.animationSpeed = 32; // set animation speed (32 is default value)
-    gauge.set(11); // set actual value
+    gauge.set(20); // set actual value
     gauge.setTextField(document.getElementById("gauge-textfield"));
 
 }

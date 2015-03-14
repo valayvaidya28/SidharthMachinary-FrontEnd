@@ -196,7 +196,7 @@
                         <td>User1</td>
                         <td>Branch1</td>
                         <td>Source1</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -206,7 +206,7 @@
                         <td>User1</td>
                         <td>Branch1</td>
                         <td>Source1</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -216,7 +216,7 @@
                         <td>User1</td>
                         <td>Branch1</td>
                         <td>Source1</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     </tbody>
@@ -233,6 +233,86 @@
                     </tr>
                     </tfoot>
                     </table>
+                    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-1" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 class="modal-title">Edit Lead</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group ">
+                                        <label for="contactCompany" class="control-label col-lg-3">Company</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="contactCompany" required>
+                                                <option value="C1">company1</option>
+                                                <option value="C2">company2</option>
+                                                <option value="C3">company3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="assigned" class="control-label col-lg-3">Assigned To</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="assigned" required>
+                                                <option value="U1">User1</option>
+                                                <option value="U2">User2</option>
+                                                <option value="U3">User3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="status" class="control-label col-lg-3">Status</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="status" required>
+                                                <option value="NW">New</option>
+                                                <option value="AC">Active</option>
+                                                <option value="CL">Closed</option>
+                                                <option value="CT">Converted</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="branch" class="control-label col-lg-3">Branch</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="branch" required>
+                                                <option value="B1">Branch1</option>
+                                                <option value="B2">Branch2</option>
+                                                <option value="B3">Branch3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="lsource" class="control-label col-lg-3">Source</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="lsource" required>
+                                                <option value="S1">Source1</option>
+                                                <option value="S2">Source2</option>
+                                                <option value="S3">Source3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="mremarks" class="control-label col-lg-3">Remarks</label>
+                                        <div class="col-lg-6">
+                                            <textarea class="form-control " id="mremarks" name="mremarks"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     </div>
                 </section>

@@ -192,7 +192,7 @@
                         <td>Category 1</td>
                         <td>qwertyui sdfghj</td>
                         <td>Yes</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -200,7 +200,7 @@
                         <td>Category 1</td>
                         <td>qwertyui sdfghj</td>
                         <td>Yes</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -208,7 +208,7 @@
                         <td>Category 1</td>
                         <td>qwertyui sdfghj</td>
                         <td>Yes</td>
-                        <td><a class="edit" href="">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     </tbody>
@@ -223,6 +223,56 @@
                     </tr>
                     </tfoot>
                     </table>
+                    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-1" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 class="modal-title">Edit Machine</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group ">
+                                        <label for="MachineName" class="control-label col-lg-3">Machine Name</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="MachineName" type="text" name="Machine" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="category" class="control-label col-lg-3">Category</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="category" type="text" name="category"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="mdes" class="control-label col-lg-3">Description</label>
+                                        <div class="col-lg-6">
+                                            <textarea class="form-control " id="mdes" name="description"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="active" class="control-label col-lg-3">Active</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="active" required>
+                                                <option value="Y">Yes</option>
+                                                <option value="N">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     </div>
                 </section>

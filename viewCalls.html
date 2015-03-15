@@ -39,6 +39,24 @@
     <!-- Custom styles for this template -->
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function populateForm(id) {
+            var values = [];
+            for(var i = 0; i < 10; i++) {
+                values[i] = document.getElementById("row"+id).cells[i].innerHTML; 
+            }
+            document.getElementById("calldate").value = values[0];
+            document.getElementById("callMode").value = values[1];
+            document.getElementById("callfor").value = values[2];
+            document.getElementById("contactCompany").value = values[3];
+            document.getElementById("copp").value = values[4];
+            document.getElementById("suser").value = values[5];
+            document.getElementById("callNotes").value = values[6];
+            document.getElementById("nextcall").value = values[8];
+
+            
+        } 
+    </script>
 </head>
 <body>
 <section id="container">
@@ -207,7 +225,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="gradeX">
+                    <tr class="gradeX" id="row1">
                         <td>9-10-11</td>
                         <td>Mode1</td>
                         <td>Opportunity</td>
@@ -218,7 +236,7 @@
                         <td>Branch1</td>
                         <td>9-11-11</td>
                         <td><span class="label label-danger">No</span></td>
-                        <td><a class="edit" href="">Follow Up</a><br><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
+                        <td><a class="edit" href="">Follow Up</a><br><a class="edit" href="#myModal-1" data-toggle="modal" id="1" onclick="populateForm(this.id)">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -280,14 +298,14 @@
                                             <div class="form-group">
                                         <label class="control-label col-md-3">Call Date</label>
                                         <div class="col-md-6 col-xs-11">
-                                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" required/>
+                                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" id="calldate"required/>
                                             <!-- <span class="help-block">Select date</span> -->
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-md-3">Next Follow Up Call</label>
                                         <div class="col-md-6 col-xs-11">
-                                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" id="nextcall"/>
                                             <!-- <span class="help-block">Select date</span> -->
                                         </div>
                                     </div>
@@ -295,9 +313,9 @@
                                         <label for="callMode" class="control-label col-lg-3">Mode</label>
                                         <div class="col-lg-6">
                                             <select class="form-control" id="callMode" required>
-                                                <option value="MD1">Mode1</option>
-                                                <option value="MD2">Mode2</option>
-                                                <option value="MD3">Mode3</option>
+                                                <option value="Mode1">Mode1</option>
+                                                <option value="Mode2">Mode2</option>
+                                                <option value="Mode3">Mode3</option>
                                             </select>
                                         </div>
                                     </div>
@@ -305,9 +323,9 @@
                                         <label for="callBy" class="control-label col-lg-3">Call By</label>
                                         <div class="col-lg-6">
                                             <select class="form-control" id="suser" required>
-                                                <option value="U1">User1</option>
-                                                <option value="U2">User2</option>
-                                                <option value="U3">User3</option>
+                                                <option value="User1">User1</option>
+                                                <option value="User2">User2</option>
+                                                <option value="User3">User3</option>
                                             </select>
                                         </div>
                                     </div>
@@ -315,9 +333,9 @@
                                         <label for="callfor" class="control-label col-lg-3">For</label>
                                         <div class="col-lg-6">
                                             <select class="form-control"  id="callfor" required>
-                                                <option value="CSTM">Customer</option>
-                                                <option value="OPP">Opportunity</option>
-                                                <option value="LD">Lead</option>
+                                                <option value="Customer">Customer</option>
+                                                <option value="Opportunity">Opportunity</option>
+                                                <option value="Lead">Lead</option>
                                             </select>
                                         </div>
                                     </div>
@@ -325,9 +343,9 @@
                                         <label for="contactCompany" class="control-label col-lg-3">Company</label>
                                         <div class="col-lg-6">
                                             <select class="form-control" id="contactCompany" required>
-                                                <option value="C1">company1</option>
-                                                <option value="C2">company2</option>
-                                                <option value="C3">company3</option>
+                                                <option value="Company1">Company1</option>
+                                                <option value="Company2">Company2</option>
+                                                <option value="Company3">Company3</option>
                                             </select>
                                         </div>
                                     </div>
@@ -344,10 +362,10 @@
                                     <div class="form-group ">
                                         <label for="copp" class="control-label col-lg-3">Opportunity</label>
                                         <div class="col-lg-6">
-                                            <select class="form-control" id="contactCompany" required>
-                                                <option value="O1">Opportunity 1 of the selected company</option>
-                                                <option value="O2">Opportunity 2 of the selected company</option>
-                                                <option value="O3">Opportunity 3 of the selected company</option>
+                                            <select class="form-control" id="copp" required>
+                                                <option value="Opportunity 1 of the selected company">Opportunity 1 of the selected company</option>
+                                                <option value="Opportunity 2 of the selected company">Opportunity 2 of the selected company</option>
+                                                <option value="Opportunity 3 of the selected company">Opportunity 3 of the selected company</option>
                                             </select>
                                         </div>
                                     </div>

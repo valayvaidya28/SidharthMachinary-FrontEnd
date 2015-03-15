@@ -25,6 +25,18 @@
     <!-- Custom styles for this template -->
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function populateForm(id) {
+            var values = [];
+            for(var i = 0; i < 4; i++) {
+                values[i] = document.getElementById("row"+id).cells[i].innerHTML; 
+            }
+            document.getElementById("MachineName").value = values[0];
+            document.getElementById("category").value = values[1];
+            document.getElementById("mdes").value = values[2];
+            document.getElementById("active").value = values[3];
+        } 
+    </script>
 </head>
 <body>
 <section id="container">
@@ -187,12 +199,12 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="gradeX">
+                    <tr class="gradeX" id="row1">
                         <td>Machine 1</td>
                         <td>Category 1</td>
                         <td>qwertyui sdfghj</td>
-                        <td>Yes</td>
-                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
+                        <td>No</td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal" id="1" onclick="populateForm(this.id)">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -255,8 +267,8 @@
                                         <label for="active" class="control-label col-lg-3">Active</label>
                                         <div class="col-lg-6">
                                             <select class="form-control"  id="active" required>
-                                                <option value="Y">Yes</option>
-                                                <option value="N">No</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
                                             </select>
                                         </div>
                                     </div>

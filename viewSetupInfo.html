@@ -39,6 +39,24 @@
     <!-- Custom styles for this template -->
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function populateForm(id) {
+            var values = [];
+            for(var i = 0; i < 9; i++) {
+                values[i] = document.getElementById("row"+id).cells[i].innerHTML; 
+            }
+            document.getElementById("idate").value = values[0];
+            document.getElementById("contactCompany").value = values[1];
+            document.getElementById("manufacturer").value = values[2];
+            document.getElementById("mname").value = values[3];
+            document.getElementById("mno").value = values[4];
+            document.getElementById("mink").value = values[5];
+            document.getElementById("place").value = values[7];
+            document.getElementById("mremarks").value = values[8];
+
+            
+        } 
+    </script>
 </head>
 <body>
 <section id="container">
@@ -206,7 +224,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="gradeX">
+                    <tr class="gradeX" id = "row1">
                         <td>9-10-11</td>
                         <td>Company1</td>
                         <td>qwerty</td>
@@ -216,7 +234,7 @@
                         <td>Branch1</td>
                         <td>abad</td>
                         <td>Temp remarks</td>
-                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal" id="1" onclick="populateForm(this.id)">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -275,9 +293,9 @@
                                         <label for="contactCompany" class="control-label col-lg-3">Company</label>
                                         <div class="col-lg-6">
                                             <select class="form-control"  id="contactCompany" required>
-                                                <option value="C1">company1</option>
-                                                <option value="C2">company2</option>
-                                                <option value="C3">company3</option>
+                                                <option value="Company1">Company1</option>
+                                                <option value="Company2">Company2</option>
+                                                <option value="Company3">Company3</option>
                                             </select>
                                         </div>
                                     </div>
@@ -296,7 +314,7 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-3">Installation Date</label>
                                         <div class="col-md-6 col-xs-11">
-                                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                                            <input id = "idate" class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
                                             <!-- <span class="help-block">Select date</span> -->
                                         </div>
                                     </div>

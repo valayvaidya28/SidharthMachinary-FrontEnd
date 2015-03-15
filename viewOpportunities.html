@@ -39,6 +39,23 @@
     <!-- Custom styles for this template -->
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function populateForm(id) {
+            var values = [];
+            for(var i = 0; i < 7; i++) {
+                values[i] = document.getElementById("row"+id).cells[i].innerHTML; 
+            }
+            document.getElementById("oppName").value = values[0];
+            document.getElementById("contactCompany").value = values[1];
+            document.getElementById("cbranch").value = values[2];
+            document.getElementById("cdate").value = values[3];
+            document.getElementById("assigned").value = values[4];
+            document.getElementById("oppstatus").value = values[5];
+            document.getElementById("closeDate").value = values[6];
+
+            
+        } 
+    </script>
 </head>
 <body>
 <section id="container">
@@ -239,15 +256,15 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="gradeX">
-                        <td>Opportunity1</td>
-                        <td>Company1</td>
-                        <td>Branch1</td>
-                        <td>9-10-11</td>
-                        <td>User1</td>
-                        <td>Active</td>
-                        <td>9-11-11</td>
-                        <td><a class="edit" href="#myModal-1" data-toggle="modal">Edit</a></td>
+                    <tr class="gradeX" id = "row1">
+                        <td>Opportunity2</td>
+                        <td>Company2</td>
+                        <td>Branch2</td>
+                        <td>9-10-12</td>
+                        <td>User2</td>
+                        <td>Quoted</td>
+                        <td>9-11-12</td>
+                        <td><a class="edit" href="#myModal-1" data-toggle="modal" id = "1" onclick="populateForm(this.id)">Edit</a></td>
                         <td><a class="delete" href="">Delete</a></td>
                     </tr>
                     <tr class="gradeX">
@@ -307,9 +324,9 @@
                                         <label for="contactCompany" class="control-label col-lg-3">Company</label>
                                         <div class="col-lg-6">
                                             <select class="form-control" id="contactCompany" onchange="reloadForm()" required>
-                                                <option value="C1">company1</option>
-                                                <option value="C2">company2</option>
-                                                <option value="C3">company3</option>
+                                                <option value="Company1">Company1</option>
+                                                <option value="Company2">Company2</option>
+                                                <option value="Company3">Company3</option>
                                             </select>
                                         </div>
                                     </div>
@@ -327,25 +344,35 @@
                                         <label for="cbranch" class="control-label col-lg-3">Branch</label>
                                         <div class="col-lg-6">
                                             <select class="form-control" id="cbranch" required>
-                                                <option value="GJ">Gujarat</option>
-                                                <option value="MH">Maharashtra</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Maharashtra">Maharashtra</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-md-3">Creation Date</label>
                                         <div class="col-md-6 col-xs-11">
-                                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                                            <input id="cdate" class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
                                             <!-- <span class="help-block">Select date</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="assigned" class="control-label col-lg-3">Assigned To</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="assigned" required>
+                                                <option value="User1">User1</option>
+                                                <option value="User2">User2</option>
+                                                <option value="User3">User3</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group ">
                                         <label for="suser" class="control-label col-lg-3">Sourced By</label>
                                         <div class="col-lg-6">
                                             <select class="form-control" id="suser" required>
-                                                <option value="U1">User1</option>
-                                                <option value="U2">User2</option>
-                                                <option value="U3">User3</option>
+                                                <option value="User1">User1</option>
+                                                <option value="User2">User2</option>
+                                                <option value="User3">User3</option>
                                             </select>
                                         </div>
                                     </div>
@@ -353,12 +380,12 @@
                                         <label for="oppstatus" class="control-label col-lg-3">Status</label>
                                         <div class="col-lg-6">
                                             <select class="form-control" id="oppstatus" required>
-                                                <option value="IN">Initial</option>
-                                                <option value="QT">Quoted</option>
-                                                <option value="NG">Negotiation</option>
-                                                <option value="OR">Order Received</option>
-                                                <option value="OL">Order Lost</option>
-                                                <option value="DD">Dead</option>
+                                                <option value="Initial">Initial</option>
+                                                <option value="Quoted">Quoted</option>
+                                                <option value="Negotiation">Negotiation</option>
+                                                <option value="Order Received">Order Received</option>
+                                                <option value="Order Lost">Order Lost</option>
+                                                <option value="Dead">Dead</option>
                                             </select>
                                         </div>
                                     </div>
@@ -397,7 +424,7 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-3">Approx. Closing date</label>
                                         <div class="col-md-6 col-xs-11">
-                                            <input class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
+                                            <input id="closeDate" class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" value="" />
                                             <!-- <span class="help-block">Select date</span> -->
                                         </div>
                                     </div>

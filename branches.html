@@ -17,6 +17,16 @@
     <!-- Custom styles for this template -->
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        function populateForm(id) {
+            var values = [];
+            for(var i = 0; i < 2; i++) {
+                values[i] = document.getElementById("row"+id).cells[i].innerHTML; 
+            }
+            document.getElementById("ebranchName").value = values[0];
+            document.getElementById("eactive").value = values[1];
+        } 
+    </script>
 </head>
 <body>
 <section id="container">
@@ -153,7 +163,7 @@
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            <h4><b>Add/Edit Branches</b></h4>
+                            <h4><b>Add Branches</b></h4>
                             <span class="tools pull-right">
                                 <a class="fa fa-chevron-down" href="javascript:;"></a>
                                 <a class="fa fa-cog" href="javascript:;"></a>
@@ -212,10 +222,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
+                                <tr id="row1">
                                     <td>Branch1</td>
-                                    <td>Yes</td>
-                                    <td><a class="edit" href="">Edit</a></td>
+                                    <td>No</td>
+                                    <td><a class="edit" href="#myModal-1" data-toggle="modal" id="1" onclick="populateForm(this.id)">Edit</a></td>
                                     <td><a class="delete" href="">Delete</a></td>
                                 </tr>
                                 <tr>
@@ -226,6 +236,44 @@
                                 </tr>
                                 </tbody>
                             </table>
+                            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-1" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 class="modal-title">Edit Branch</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form class="form-horizontal" role="form">
+                                            <div class="form-group ">
+                                        <label for="eBranchName" class="control-label col-lg-3">Branch Name</label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control " id="ebranchName" type="text" name="Branch" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="eactive" class="control-label col-lg-3">Active</label>
+                                        <div class="col-lg-6">
+                                            <select class="form-control"  id="eactive" required>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-6">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-default" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </section>
                 </div>

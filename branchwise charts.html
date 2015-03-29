@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Sidharth Machinaries">
     <link rel="shortcut icon" href="images/favicon.html">
-    <title>Companies</title>
+    <title>Branchwise Reports</title>
     <!--Core CSS -->
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -148,7 +148,7 @@
 </aside>
 <!--sidebar end-->
 <section id="main-content">
-    <div class="dropdown" style="z-index:1;margin-left:-30%">
+    <!-- <div class="dropdown" style="z-index:1;margin-left:-30%">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width:11%;margin-top:6.6%;margin-left:50%">
         Branch
         <span class="caret"></span>
@@ -159,10 +159,28 @@
         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Branch 3</a></li>
         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Branch 4</a></li>
       </ul>
-    </div>
-      <section class="wrapper" style="width:100%;margin-top:-5.7%">
+    </div> -->
+      <div class="form-group" style="margin-top:-1.5%">
+          <div class="col-lg-6" style="margin-top:10%; width:17%;margin-left:-2.8%">
+              <select class="form-control" required>
+                  <option value="L1">Ahmedabad</option>
+                  <option value="L2">Vadodara</option>
+                  <option value="L3">Mumbai</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group" style="margin-top:-1.5%">
+          <div class="col-lg-6" style="margin-top:10%; width:17%;margin-left:-0.8%">
+              <select class="form-control" required>
+                  <option value="L1">2012-13</option>
+                  <option value="L2">2013-14</option>
+                  <option value="L3">2014-15</option>
+              </select>
+          </div>
+      </div>
+      <section class="wrapper" style="width:100%">
            <!-- page start-->
-               <div class="row" style="margin-top:20%;margin-left:3%">
+               <div class="row" style="margin-top:8%;margin-left:3%">
                <div class="col-sm-12" style="margin-left:-35px;margin-top:-156px;z-index:-1000">
                    <section class="panel">
                        <header class="panel-heading">

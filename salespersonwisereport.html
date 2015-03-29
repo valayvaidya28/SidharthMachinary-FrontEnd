@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Sidharth Machinaries">
     <link rel="shortcut icon" href="images/favicon.html">
-    <title>Forecast</title>
+    <title>Sales person wise chart</title>
     <!--Core CSS -->
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -148,43 +148,37 @@
 </aside>
 <!--sidebar end-->
 <section id="main-content">
-   <section class="wrapper" style="width:100%">
+  <div class="form-group" style="margin-top:-1.5%;margin-left:-1%">
+      <div class="col-lg-6" style="margin-top:10%; width:17%;margin-left:-2.8%">
+          <select class="form-control" required>
+              <option value="L1">Ahmedabad</option>
+              <option value="L2">Vadodara</option>
+              <option value="L3">Mumbai</option>
+          </select>
+      </div>
+  </div>
+  <div class="form-group" style="margin-top:-1.5%">
+      <div class="col-lg-6" style="margin-top:10%; width:17%;margin-left:-0.8%">
+          <select class="form-control" required>
+              <option value="L1">Employee</option>
+              <option value="L2">Valay</option>
+              <option value="L3">Mohit</option>
+          </select>
+      </div>
+  </div>
+  <div class="form-group" style="margin-top:-1.5%">
+      <div class="col-lg-6" style="margin-top:10%; width:17%;margin-left:-0.8%">
+          <select class="form-control" required>
+              <option value="L1">Year</option>
+              <option value="L2">2013-14</option>
+              <option value="L3">2014-15</option>
+          </select>
+      </div>
+  </div>
+   <section class="wrapper" style="width:100%;margin-top:2%">
        <!--page start-->
            <div class="row">
               <div class="col-sm-12">
-                  <div class="dropdown" style="z-index:1;margin-left:-59%">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width:11%;margin-bottom:-1.2%;margin-left:50%">
-                              Employee
-                              <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="margin-left:50%;margin-top:1%">
-                              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Name 1</a></li>
-                              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Name 2</a></li>
-                            </ul>
-                          </div>
-                          <div class="dropdown" style="z-index:1;margin-left:-105%">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width:11%;margin-top:-0.7%;margin-left:49.8%">
-                              Branch
-                              <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="margin-left:50%;margin-bottom:-1.2%">
-                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Branch 1</a></li>
-                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Branch 2</a></li>
-                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Branch 3</a></li>
-                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Branch 4</a></li>
-                             
-                            </ul>
-                          </div>
-                          <div class="dropdown" style="z-index:1;margin-left:-105%">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="width:7%;margin-bottom:-1.2%;margin-left:70.5%;margin-top:-3.6%">
-                              Year
-                              <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="margin-left:70.5%;margin-top:-0.7%">
-                              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2012-13</a></li>
-                              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2013-14</a></li>
-                            </ul>
-                          </div>
                   <section class="panel" style="z-index:-1000;">
                       <header class="panel-heading">
                           Sales person report

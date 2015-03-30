@@ -205,7 +205,7 @@ a,a:hover,a:focus {
 }
 /*sidebar navigation*/
 #sidebar {
-    width:190px;
+    width:240px;
     height:100%;
     position:fixed;
     background:#A60A27;

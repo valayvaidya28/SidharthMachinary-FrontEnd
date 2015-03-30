@@ -43,7 +43,7 @@
             var arrayOfHTxt = new Array();
             var arrayOfHtxtCellIndex = new Array();
 
-            for (var v = 0; v < headRow.cells.length-2; v++) {
+            for (var v = 0; v < headRow.cells.length-3; v++) {
              if (headRow.cells[v].getElementsByTagName('input')[0]) {
              var Htxtbox = headRow.cells[v].getElementsByTagName('input')[0];
               if (Htxtbox.value.replace(/^\s+|\s+$/g, '') != '') {
@@ -237,6 +237,19 @@
                         <th>Edit</th>
                         <th>Change Password</th>
                         <th>Delete</th>
+                    </tr>
+                    </thead>
+                    </thead>
+                    <thead>
+                        <tr class="gradeX">
+                        <td><input class="form-control input-sm m-bot15" type="text" style="width: 100%" onkeyup="searchRows('dynamic-table')"></td>
+                        <td><input class="form-control input-sm m-bot15" type="text" style="width: 100%" onkeyup="searchRows('dynamic-table')"></td>
+                        <td><input class="form-control input-sm m-bot15" type="text" style="width: 100%" onkeyup="searchRows('dynamic-table')"></td>
+                        <td><input class="form-control input-sm m-bot15" type="text" style="width: 100%" onkeyup="searchRows('dynamic-table')"></td>
+                        <td><input class="form-control input-sm m-bot15" type="text" style="width: 100%" onkeyup="searchRows('dynamic-table')"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     </thead>
                     <tbody>

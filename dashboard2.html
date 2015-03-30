@@ -215,28 +215,87 @@ $(function () {
         <section class="wrapper">
              <div class="row">
                 <div class="col-md-3">
-                    <section class="panel">
-                        <div class="panel-body"> 
-                            <div id="chart1" style="height:250px" ></div> 
-                            <!-- <ul class="list-inline">
-                                <li>
-                                    1. IN: Initial
-                                </li>
-                                <li>
-                                    2. NG: Negotiation
-                                </li>
-                                <li>
-                                    3. QT: Quoted
-                                </li>
-                                <li>
-                                    4. OR: Order Received
-                                </li>
-                            </ul> -->       
+                    <section class="panel" >
+                        <div class="panel-body" > 
+                            <div id="chart1" style="height:250px"></div>   
                         </div>
                     </section>
                 </div>
+                <div class="col-md-3">
+                <section class="panel1" style="max-height: 280px;">
+                    <div class="panel-body" style="margin-bottom: inherit;">
+                        <div class="top-stats-panel">
+                            <div class="gauge-canvas">
+                                <h4 class="widget-h">Leads Converted to Opportunities</h4>
+                                <div align="center">
+                                    <canvas width=160 height=100 id="gauge" style="margin-top: 26px;margin-bottom: 26px;"></canvas>
+                                </div>
+                            </div>
+                            <ul class="gauge-meta clearfix">
+                                <li id="gauge-textfield" class="pull-left gauge-value"></li>
+                                <li class="pull-right gauge-title">Out of 25</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </div>
-            
+            <div class="col-md-3">
+                    <section class="panel" >
+                        <div class="panel-body" style="margin-bottom: inherit;">
+                        <div class="row" style="margin-bottom: 10px;max-height:120px;"> 
+                            <!-- <div class="col-md-5" style="width:50%">                -->
+                            <div class="mini-stat clearfix">
+                                <span class="mini-stat-icon" style="background:crimson"><i class="fa fa-chevron-up"></i></span>
+                                <div class="mini-stat-info">
+                                    <span>75</span>
+                                    Hot Leads
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="row" style="max-height:120px;">
+                        <!-- <div class="col-md-5" style="width:50%">                -->
+                            <div class="mini-stat clearfix">
+                                <span class="mini-stat-icon tar"><i class="fa fa-chevron-down"></i></span>
+                                <div class="mini-stat-info">
+                                    <span>34</span>
+                                    Cold Leads
+                                </div>
+                            </div>
+                        <!-- </div>    -->
+                        </div>
+                    </div>
+                    </section>
+                </div>
+                <div class="col-md-3">
+                    <section class="panel" >
+                        <div class="panel-body" style="margin-bottom: inherit;">
+                        <div class="row" style="margin-bottom: 10px;max-height:120px;"> 
+                            <!-- <div class="col-md-5" style="width:50%">                -->
+                            <div class="mini-stat clearfix">
+                                <span class="mini-stat-icon" style="background:#A9D86E;"><i class="fa fa-rupee"></i></span>
+                            <div class="mini-stat-info">
+                                <span>Rs.68990</span>
+                                Total Sales
+                            </div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="row" style="max-height:120px;">
+                        <!-- <div class="col-md-5" style="width:50%">                -->
+                            <div class="mini-stat clearfix">
+                                <span class="mini-stat-icon tar" style="background:#302C2A !important"><i class="fa fa-phone"></i></span>
+                                <div class="mini-stat-info">
+                                    <span>34</span>
+                                    Calls this week
+                                </div>
+                            </div>
+                        <!-- </div>    -->
+                        </div>
+                    </div>
+                    </section>
+                </div>
+            </div>
             <!-- page start-->
             <!-- <div class="row">
                 <div class="col-md-3">

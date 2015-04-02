@@ -18,6 +18,65 @@
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet"/>
     <link href="js/c3-chart/c3.css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+            
+    <script type="text/javascript">
+    $(function () {
+        $('#comparisonChart').highcharts({
+            chart: {
+                type: 'spline'
+            },
+            title: {
+                text: 'Monthly comparison chart'
+            },
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                },
+                labels: {
+                    formatter: function () {
+                        return this.value + '°';
+                    }
+                }
+            },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            plotOptions: {
+                spline: {
+                    marker: {
+                        radius: 4,
+                        lineColor: '#666666',
+                        lineWidth: 1
+                    }
+                }
+            },
+            series: [{
+            name: 'Live Opportunities',
+            marker: {
+                symbol: 'square'
+            },
+            data: [7, 6, 9, 14, 18, 21, 25, {
+                y: 26,
+            }, 23, 18, 13, 9]
+
+        }, {
+            name: 'Dead Opportunities',
+            marker: {
+                symbol: 'diamond'
+            },
+            data: [{
+                y: 3.9,
+            }, 4, 5, 8, 11, 15, 17, 16, 14, 10, 6, 4]
+        }]
+        });
+    });
+</script>
 </head>
 <body>
 <section id="container">
@@ -147,46 +206,45 @@
     </div>
 </aside>
 <!--sidebar end-->
-<section id="main-content">
-    <div class="form-group" style="margin-top:-1.5%">
-        <div class="col-lg-6" style="margin-top:10%; width:17%;">
-            <select class="form-control" required>
-                <option value="L1">Ahmedabad</option>
-                <option value="L2">Vadodara</option>
-                <option value="L3">Mumbai</option>
-            </select>
-        </div>
-    </div>
-    <div class="form-group" style="margin-top:-1.5%">
-        <div class="col-lg-6" style="margin-top:10%; width:17%;">
-            <select class="form-control" required>
-                <option value="L1">2012-13</option>
-                <option value="L2">2013-14</option>
-                <option value="L3">2014-15</option>
-            </select>
-        </div>
-    </div>
-    <section class="wrapper">
-        <div class="row">
-            <div class="col-sm-12">
-                <section class="panel" style="margin-top:-5%">
-                    <header class="panel-heading" style="margin-left:38%">
-                       Comparison Chart - Branch 
-                    </header>
-                    <div class="panel-body">
+      <section id="main-content">
 
-                        <div class="chart">
-                            <div id="chart">
-                            </div>
-                        </div>
-                        <div style="margin-left:20px">
-                            0 - January, 1- February, 2 - March, 3 - April, 4 - May, 5 - June, 6 - July, 7 - August, 8 - September, 9 - October, 10 - November, 11 - December
-                        </div>
-                    </div>
-                </section>
+        <section class="wrapper">
+          <div class="row">
+            <div class="col-lg-2">
+             <div class="form-group">
+              <select class="form-control" id="source">
+                <optgroup label="">
+                  <option value="CT">Vadodara</option>
+                  <option value="DE">Ahmedabad</option>
+                  <option value="FL">Mumbai</option>
+                  <option value="GA">Georgia</option>
+                </optgroup>
+              </select>
             </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="form-group">
+              <select class="form-control" id="source">
+                <optgroup label="">
+                  <option value="CT">2013-2014</option>
+                  <option value="DE">2014-2015</option>
+                  <option value="FL">2015-2016</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
         </div>
-       </section>
+        <div class="row">
+          <div class="col-md-12">
+            <section class="panel">
+              <div class="panel-body">
+                    <div id="comparisonChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
     </section>
 </section>
 
@@ -199,17 +257,10 @@
 <script src="js/jquery.scrollTo.min.js"></script>
 <script src="js/jquery.nicescroll.js"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-<!-- <script src="js/easypiechart/jquery.easypiechart.js"></script>
-<script src="js/sparkline/jquery.sparkline.js"></script> -->
-<!--jQuery Flot Chart-->
-<!--Chart JS-->
-
-<!--C3 Chart-->
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="js/c3-chart/c3.js"></script>
-<script src="js/c3-chart.init.js"></script>
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/modules/exporting.js"></script>
 <!--script for this page-->
 </body>
 

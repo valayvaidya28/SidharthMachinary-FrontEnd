@@ -17,7 +17,61 @@
     <!-- Custom styles for this template -->
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet"/>
-       <link rel="stylesheet" href="js/morris-chart/morris.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+      <script type="text/javascript">
+        $(function () {
+        $('#branchChart').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Sales person chart'
+            },
+            xAxis: {
+                categories: [
+                    'Jan',
+                    'Feb',
+                    'Mar',
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec'
+                ],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: ''
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:0f}</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Sales',
+                data: [49, 71, 106, 129, 144, 176, 135, 148, 216, 194, 95, 54]
+
+            }]
+        });
+    });
+        </script>
 </head>
 <body>
 <section id="container">
@@ -147,51 +201,55 @@
     </div>
 </aside>
 <!--sidebar end-->
-<section id="main-content">
-  <div class="form-group" style="margin-top:-1.5%;">
-      <div class="col-lg-6" style="margin-top:10%; width:17%;">
-          <select class="form-control" required>
-              <option value="L1">Ahmedabad</option>
-              <option value="L2">Vadodara</option>
-              <option value="L3">Mumbai</option>
-          </select>
-      </div>
-  </div>
-  <div class="form-group" style="margin-top:-1.5%">
-      <div class="col-lg-6" style="margin-top:10%; width:17%;">
-          <select class="form-control" required>
-              <option value="L1">Employee</option>
-              <option value="L2">Valay</option>
-              <option value="L3">Mohit</option>
-          </select>
-      </div>
-  </div>
-  <div class="form-group" style="margin-top:-1.5%">
-      <div class="col-lg-6" style="margin-top:10%; width:17%;">
-          <select class="form-control" required>
-              <option value="L1">Year</option>
-              <option value="L2">2013-14</option>
-              <option value="L3">2014-15</option>
-          </select>
-      </div>
-  </div>
-   <section class="wrapper" style="width:100%;margin-top:2%">
-       <!--page start-->
-           <div class="row">
-              <div class="col-sm-12">
-                  <section class="panel" style="z-index:-1000;">
-                      <header class="panel-heading">
-                          Sales person report
-                      </header>
-                      <div class="panel-body">
-                          <div id="graph-line"></div>
-                      </div>
-                  </section>
-              </div>
+ <section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          <div class="col-lg-2">
+           <div class="form-group">
+            <select class="form-control" id="source">
+              <optgroup label="">
+                <option value="CT">Vadodara</option>
+                <option value="DE">Ahmedabad</option>
+                <option value="FL">Mumbai</option>
+                <option value="GA">Georgia</option>
+              </optgroup>
+            </select>
           </div>
-       <!-- page end-->
-      </section>
-</section>
+        </div>
+        <div class="col-lg-2">
+          <div class="form-group">
+            <select class="form-control" id="source">
+              <optgroup label="">
+                <option value="CT">Employee 1</option>
+                <option value="DE">Employee 2</option>
+                <option value="FL">Employee 3</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="form-group">
+            <select class="form-control" id="source">
+              <optgroup label="">
+                <option value="CT">2013-2014</option>
+                <option value="DE">2014-2015</option>
+                <option value="FL">2015-2016</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <section class="panel">
+            <div class="panel-body">
+              <div id="branchChart" style="width:100%"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </section>
 <!-- Placed js at the end of the document so the pages load faster -->
 <!--Core js-->
 <script src="js/jquery.js"></script>
@@ -201,22 +259,11 @@
 <script src="js/jquery.scrollTo.min.js"></script>
 <script src="js/jquery.nicescroll.js"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-
-<!--jQuery Flot Chart-->
-<!--Chart JS-->
-<!-- < morris chart js -->
-<script src="js/morris-chart/morris.js"></script>
-<script src="js/morris-chart/raphael-min.js"></script>
-<script src="js/morris.init.js"></script>
-<!--clock init-->
-<!--common script init for all pages-->
-
-
-<!--clock init-->
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
 <!--script for this page-->
-
+<script src="js/highcharts.js"></script>
+<script src="js/exporting.js"></script>
 
 </body>
 

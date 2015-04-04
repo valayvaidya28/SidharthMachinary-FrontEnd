@@ -290,6 +290,9 @@
             <li class="">
                 <a data-toggle="tab" href="#calls">Calls</a>
             </li>
+            <li class="">
+                <a data-toggle="tab" href="#quotations">Quotations</a>
+            </li>
         </ul>
     </header>
     <div class="panel-body">
@@ -476,6 +479,95 @@
                             </tbody>
                         </table>
                     </section>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="quotations" class="tab-pane">
+        <div id="quotaions" class="tab-pane">
+            <div id="quotations" class="tab-pane">
+                <div class="panel-body">
+                <div class="row">
+                    <div>
+                      <a href="#myModal" data-toggle="modal" class="btn btn-success" style="background-color: #1fb5ad;border-color: #1fb5ad;">
+                          Add Quotation
+                      </a>
+                    </div>
+
+                  </div>
+                  <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 class="modal-title">Add Quotation</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label class="control-label" for="inputSuccess">Select Opportunity</label>
+                                                <select class="form-control m-bot15">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputFile">Choose File</label>
+                                                <input type="file" id="exampleInputFile3">
+                                                <p class="help-block">File size should not exceed 16 Mb.</p>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Add</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  <div class="row" style="margin-top: 5px"> 
+                    <section id="flip-scroll">
+                        <table class="table table-bordered table-striped table-condensed cf">
+                            <thead class="cf">
+                                <tr>
+                                  <th>Document Name</th>
+                                  <th>Opportunity Name</th>
+                                  <th>Uploaded By</th>
+                                  <th>Upload Date/Time</th>
+                                  <th>Delete</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>abc
+                                    <div class="fa-hover col-md-3 col-sm-4"><a href="#"><i class="fa fa-download"></a></div></td>
+                                    <td>opp1</td>
+                                    <td>xyz</td>
+                                    <td>9-10-11 12:00:00</td>
+                                    <td><div class="fa-hover col-md-3 col-sm-4"><a href="#trash-o"><i class="fa fa-trash-o"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td>abc
+                                    <div class="fa-hover col-md-3 col-sm-4"><a href="#"><i class="fa fa-download"></a></div></td>
+                                    <td>opp1</td>
+                                    <td>xyz</td>
+                                    <td>9-10-11 12:00:00</td>
+                                    <td><div class="fa-hover col-md-3 col-sm-4"><a href="#trash-o"><i class="fa fa-trash-o"></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td>abc
+                                    <div class="fa-hover col-md-3 col-sm-4"><a href="#"><i class="fa fa-download"></a></div></td>
+                                    <td>opp1</td>
+                                    <td>xyz</td>
+                                    <td>9-10-11 12:00:00</td>
+                                    <td><div class="fa-hover col-md-3 col-sm-4"><a href="#trash-o"><i class="fa fa-trash-o"></a></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                  </div>
                 </div>
             </div>
         </div>

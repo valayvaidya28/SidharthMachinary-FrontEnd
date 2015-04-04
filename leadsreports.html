@@ -30,18 +30,10 @@
           },
           xAxis: {
               categories: [
-                  'Jan',
-                  'Feb',
-                  'Mar',
-                  'Apr',
-                  'May',
-                  'Jun',
-                  'Jul',
-                  'Aug',
-                  'Sep',
-                  'Oct',
-                  'Nov',
-                  'Dec'
+                  'Branch 1',
+                  'Branch 2',
+                  'Branch 3',
+                  'Branch 4'
               ],
               crosshair: true
           },
@@ -67,81 +59,50 @@
           },
           series: [{
               name: 'Leads',
-              data: [83, 78, 98, 93, 106, 84, 105, 104, 91, 83, 106, 92]
+              data: [83, 78, 98, 93]
 
           }]
       });
   });
       </script>
-           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-           <script type="text/javascript">
-      $(function () {
-          $('#chart').highcharts({
-              chart: {
-                  zoomType: 'xy'
-              },
-              title: {
-                  text: 'Sales person wise'
-              },
-              subtitle: {
-                  
-              },
-              xAxis: [{
-                  categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                  crosshair: true
-              }],
-              yAxis: [{ // Primary yAxis
-                  labels: {
-                      format: '',
-                      style: {
-                          color: Highcharts.getOptions().colors[1]
-                      }
-                  },
-                  title: {
-                      text: '',
-                      style: {
-                          color: Highcharts.getOptions().colors[1]
-                      }
-                  }
-              }, { // Secondary yAxis
-                  title: {
-                      text: '',
-                      style: {
-                          color: Highcharts.getOptions().colors[0]
-                      }
-                  },
-                  labels: {
-                      format: '{value}',
-                      style: {
-                          color: Highcharts.getOptions().colors[0]
-                      }
-                  },
-                  opposite: true
-              }],
-              tooltip: {
-                  shared: true
-              },
-              legend: {
-                  layout: 'vertical',
-                  align: 'left',
-                  x: 120,
-                  verticalAlign: 'top',
-                  y: 100,
-                  floating: true,
-                  backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
-              },
-              series: [{
-                  name: 'Leads',
-                  type: 'spline',
-                  data: [7, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
-                  tooltip: {
-                      valueSuffix: ''
-                  }
-              }]
-          });
-      });
-           </script>
+           
+               <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+               <style type="text/css">
+           ${demo.css}
+               </style>
+               <script type="text/javascript">
+           $(function () {
+               $('#barChart').highcharts({
+                   chart: {
+                       type: 'bar'
+                   },
+                   title: {
+                       text: 'Sales-person Wise Chart'
+                   },
+                   xAxis: {
+                       categories: ['Employee 1', 'Employee 2', 'Employee 3', 'Employee 4']
+                   },
+                   yAxis: {
+                       min: 0,
+                       title: {
+                           text: 'Total Open Opportunities'
+                       }
+                   },
+                   legend: {
+                       reversed: true
+                   },
+                   plotOptions: {
+                       series: {
+                           stacking: 'normal'
+                       }
+                   },
+                   series: [{
+                       name: 'Open Opportunities',
+                       data: [15, 33, 54, 75]
+                   }]
+               });
+           });
+               </script>
 </head>
 <body>
   <section id="container">
@@ -280,32 +241,6 @@
                   Total Leads
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-2">
-               <div class="form-group">
-                <select class="form-control" id="source">
-                  <optgroup label="">
-                    <option value="CT">Vadodara</option>
-                    <option value="DE">Ahmedabad</option>
-                    <option value="FL">Mumbai</option>
-                    <option value="GA">Georgia</option>
-                  </optgroup>
-                </select>
-              </div>
-            </div>
-            <div class="col-lg-2">
-              <div class="form-group">
-                <select class="form-control" id="source">
-                  <optgroup label="">
-                    <option value="CT">2013-2014</option>
-                    <option value="DE">2014-2015</option>
-                    <option value="FL">2015-2016</option>
-                  </optgroup>
-                </select>
-              </div>
-            </div>
-
-          </div>
           <div class="row">
             <div class="col-md-12">
               <section class="panel">
@@ -316,54 +251,32 @@
             </div>
           </div>
         </section>
-          <section class="wrapper">
-            <div class="row">
-              <div class="col-lg-2">
-               <div class="form-group">
-                <select class="form-control" id="source">
-                  <optgroup label="">
-                    <option value="CT">Vadodara</option>
-                    <option value="DE">Ahmedabad</option>
-                    <option value="FL">Mumbai</option>
-                    <option value="GA">Georgia</option>
-                  </optgroup>
-                </select>
-              </div>
-            </div>
-            <div class="col-lg-2">
-              <div class="form-group">
-                <select class="form-control" id="source">
-                  <optgroup label="">
-                    <option value="CT">Employee 1</option>
-                    <option value="DE">Employee 2</option>
-                    <option value="FL">Employee 3</option>
-                  </optgroup>
-                </select>
-              </div>
-            </div>
-            <div class="col-lg-2">
-              <div class="form-group">
-                <select class="form-control" id="source">
-                  <optgroup label="">
-                    <option value="CT">2013-2014</option>
-                    <option value="DE">2014-2015</option>
-                    <option value="FL">2015-2016</option>
-                  </optgroup>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <section class="panel">
-                <div class="panel-body">
-                    <div id="chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            <section class="wrapper">
+                
+              <div class="row">
+                <div class="col-lg-2">
+                 <div class="form-group">
+                  <select class="form-control" id="source">
+                    <optgroup label="">
+                      <option value="CT">Vadodara</option>
+                      <option value="DE">Ahmedabad</option>
+                      <option value="FL">Mumbai</option>
+                      <option value="GA">Georgia</option>
+                    </optgroup>
+                  </select>
                 </div>
-              </section>
+              </div>
             </div>
-          </div>
-        </section>
-      </section>
+            <div class="row">
+              <div class="col-md-12">
+                <section class="panel">
+                  <div class="panel-body">
+                    <div id="barChart" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
         
     </section>
 

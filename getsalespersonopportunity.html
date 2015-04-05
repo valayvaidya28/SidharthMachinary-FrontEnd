@@ -1,0 +1,35 @@
+<script type="text/javascript">
+  $(function () {
+      $('#barChart').highcharts({
+          chart: {
+              type: 'bar'
+          },
+          title: {
+              text: 'Sales-person Wise Chart'
+          },
+          xAxis: {
+              categories: ['Employee 1', 'Employee 2', 'Employee 3', 'Employee 4']
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Total Open Opportunities'
+              }
+          },
+          legend: {
+              reversed: true
+          },
+          plotOptions: {
+              series: {
+                  stacking: 'normal'
+              }
+          },
+          series: [{
+              name: 'Open Opportunities',
+              data: [15, 33, 54, 75]
+          }]
+      });
+  });
+      </script>
+
+    <div id="barChart" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>

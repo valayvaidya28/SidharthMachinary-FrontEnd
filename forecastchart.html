@@ -18,7 +18,28 @@
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet"/>
     <link href="js/c3-chart/c3.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>  
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#button').click(function(){
+              var days = document.getElementById("days").value;
+              //var year = document.getElementById("year").value;
+            $.ajax({
+
+                type: "GET",
+                url: "getexceptionreport.php",
+                data: 'days='+days,
+                success: function(msg){
+                    $('#target').html(msg);
+                    
+                }
+
+            }); // Ajax Call
+        }); //event handler
+    }); //document.ready
+  </script>
   </head>
+  
   <body>
     <section id="container">
       <!--header start-->
@@ -196,8 +217,20 @@
             </section>
            </div>
            </div>
-          <div class="row">
+           <div class="row">
             <div class="col-md-4">
+              <form>
+                     <div class="input-group m-bot15">
+                         <input type="text" class="form-control" id = "days" placeholder="Enter the number of days">
+                         <span class="input-group-btn">
+                             <button class="btn btn-success" id="button" type="button" style="background-color:blue">Go!</button>
+                         </span>
+                     </div>
+                 </form>
+            </div>
+          </div>
+          <div class="row" id="target">
+            <div class="col-md-6">
                 <div class="mini-stat clearfix" style="padding-top: 36px;">
                   <span class="mini-stat-icon" style="background:blue;"><i class="fa fa-chevron-down"></i></span>
                   <div class="mini-stat-info" style="margin-bottom: 27px;">
@@ -205,49 +238,18 @@
                     Leads not contacted in last X days
                   </div>
               </div>
-                 <form>
-                     <div class="input-group m-bot15">
-                         <input type="text" class="form-control" placeholder="Enter the number of days">
-                         <span class="input-group-btn">
-                             <button class="btn btn-success" type="button" style="background-color:blue">Go!</button>
-                         </span>
-                     </div>
-                 </form>
+                 
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="mini-stat clearfix" style="padding-top: 36px;">
                   <span class="mini-stat-icon" style="background:crimson;"><i class="fa fa-chevron-down"></i></span>
                   <div class="mini-stat-info" style="margin-bottom: 27px;">
                     <span>16</span>
-                    Leads not contacted in last X days
+                    Opportunities not contacted in last X days
                   </div>
                 </div>
-                <form>
-                    <div class="input-group m-bot15">
-                        <input type="text" class="form-control" placeholder="Enter the number of days">
-                        <span class="input-group-btn">
-                            <button class="btn btn-success" type="button" style="background-color:crimson">Go!</button>
-                        </span>
-                    </div>
-                </form>
+                
               </div>
-            <div class="col-md-4">
-                <div class="mini-stat clearfix" style="padding-top: 36px;">
-                  <span class="mini-stat-icon" style="background:orange;"><i class="fa fa-chevron-down"></i></span>
-                  <div class="mini-stat-info" style="margin-bottom: 27px;">
-                    <span>19</span>
-                    Leads not contacted in last X days
-                  </div>
-                </div>
-                <form>
-                    <div class="input-group m-bot15">
-                        <input type="text" class="form-control" placeholder="Enter the number of days">
-                        <span class="input-group-btn">
-                            <button class="btn btn-success" type="button" style="background-color:orange" >Go!</button>
-                        </span>
-                    </div>
-                </form>
-            </div>
           </div>
           </section>
           </section>

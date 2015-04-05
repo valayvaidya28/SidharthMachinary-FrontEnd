@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Sidharth Machinaries">
     <link rel="shortcut icon" href="images/favicon.html">
-    <title>Sales person wise chart</title>
+    <title>Machine Sales</title>
     <!--Core CSS -->
     <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -18,7 +18,26 @@
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet"/>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script type="text/javascript">
+        $(document).ready(function() {
+        $('#button').click(function(){
+              var branch = document.getElementById("branch").value;
+              var year = document.getElementById("year").value;
+              var machine = document.getElementById("machine").value;
+            $.ajax({
+
+                type: "GET",
+                url: "getmachinewisereport.php",
+                data: 'branch='+branch+'&year='+year+'&machine='+machine,
+                success: function(msg){
+                    $('#chart').html(msg);
+                    
+                }
+
+            }); // Ajax Call
+        }); //event handler
+    }); //document.ready
    $(function () {
        $('#chart').highcharts({
            chart: {
@@ -220,7 +239,7 @@
         <div class="row">
           <div class="col-lg-2">
            <div class="form-group">
-            <select class="form-control" id="source">
+            <select class="form-control" id="branch">
               <optgroup label="">
                 <option value="CT">Vadodara</option>
                 <option value="DE">Ahmedabad</option>
@@ -232,24 +251,30 @@
         </div>
         <div class="col-lg-2">
           <div class="form-group">
-            <select class="form-control" id="source">
+            <select class="form-control" id="machine">
               <optgroup label="">
-                <option value="CT">Employee 1</option>
-                <option value="DE">Employee 2</option>
-                <option value="FL">Employee 3</option>
+                <option value="CT">Machine 1</option>
+                <option value="DE">Machine 2</option>
+                <option value="FL">Machine 3</option>
               </optgroup>
             </select>
           </div>
         </div>
         <div class="col-lg-2">
           <div class="form-group">
-            <select class="form-control" id="source">
+            <select class="form-control" id="year">
               <optgroup label="">
                 <option value="CT">2013-2014</option>
                 <option value="DE">2014-2015</option>
                 <option value="FL">2015-2016</option>
               </optgroup>
             </select>
+          </div>
+        </div>
+   
+      <div class="col-lg-2">
+          <div class="form-group">
+            <button class="btn btn-primary" id="button">Generate</button>
           </div>
         </div>
       </div>

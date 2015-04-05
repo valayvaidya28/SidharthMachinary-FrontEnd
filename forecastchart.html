@@ -27,7 +27,7 @@
             $.ajax({
 
                 type: "GET",
-                url: "getexceptionreport.php",
+                url: "getexceptionreports.php",
                 data: 'days='+days,
                 success: function(msg){
                     $('#target').html(msg);

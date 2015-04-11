@@ -14,6 +14,7 @@
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <!--clock css-->
     <link href="js/css3clock/css/style.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="js/gritter/css/jquery.gritter.css" />
     <!-- Custom styles for this template -->
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet"/>
@@ -163,7 +164,7 @@
                         </header>
                         <div class="panel-body">
                             <div class=" form">
-                                <form class="cmxform form-horizontal " id="commentForm" method="get" action="#">
+                                <form class="cmxform form-horizontal " id="commentForm" method="get" action="#" onsubmit="return modalCall()">
                                     <div class="form-group ">
                                         <label for="cname" class="control-label col-lg-3">Company Name</label>
                                         <div class="col-lg-3">
@@ -208,7 +209,7 @@
                                         </div>
                                         <label for="cbphone" class="control-label col-lg-3">Business Phone</label>
                                         <div class="col-lg-3">
-                                            <input class="form-control " id="cbphone" type="number" name="bphone" />
+                                            <input class="form-control " id="cbphone"  name="bphone" />
                                         </div>
                                     </div>
                                     <div class="form-group ">
@@ -218,7 +219,7 @@
                                         </div>
                                         <label for="cmobile" class="control-label col-lg-3">Mobile</label>
                                         <div class="col-lg-3">
-                                            <input class="form-control " id="cmobile" type="number" name="mobile" />
+                                            <input class="form-control " id="cmobile"  name="mobile" />
                                         </div>
                                     </div>
                                     <div class="form-group ">
@@ -228,7 +229,7 @@
                                         </div>
                                         <label for="cphone2" class="control-label col-lg-3">Phone2</label>
                                         <div class="col-lg-3">
-                                            <input class="form-control " id="cphone2" type="number" name="phone2" />
+                                            <input class="form-control " id="cphone2" name="phone2" />
                                         </div>
                                     </div>
                                     <div class="form-group ">
@@ -280,11 +281,37 @@
 
                                     <div class="form-group">
                                         <div class="col-lg-offset-3 col-lg-6">
-                                            <button class="btn btn-primary" type="submit">Save</button>
+                                            <button class="btn btn-primary" >Save</button>
                                             <button class="btn btn-default" type="button">Cancel</button>
+                                             
                                         </div>
                                     </div>
                                 </form>
+                                <!-- <button class="btn btn-primary"  onclick="modalCall()" >modal</button> -->
+                                
+
+           
+                            <!-- Modal -->
+                            <!-- <button class="btn btn-primary" onclick="modalCall()">Modal</button> -->
+                            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">Wrong Input!!!</h4>
+                                        </div>
+                                        <div class="modal-body" >
+                                        <h4><b><i><div  id = "modaltext"></div></h4>
+
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- modal -->
+
+                       
+                                
                             </div>
 
                         </div>
@@ -296,6 +323,35 @@
 </section>
 <!-- Placed js at the end of the document so the pages load faster -->
 <!--Core js-->
+<script type="text/javascript">
+    function modalCall() {
+        var error;
+        var phone2 = document.getElementById("cphone2").value;
+        var mobile = document.getElementById("cmobile").value;
+        var bphone = document.getElementById("cbphone").value;
+        var flag = false;
+        if(phone2.length>0 && isNaN(phone2)) {
+            flag = true;
+            error = "phone2 should be numeric!!!";
+        }
+        if(mobile.length>0 && isNaN(mobile)) {
+            flag = true;
+            error = "mobile should be numeric!!!";
+        }
+        if(bphone.length>0 && isNaN(bphone)) {
+            flag = true;
+            error = "bphone should be numeric!!!";
+        }
+        if(flag) {
+            //alert(error);
+            document.getElementById("modaltext").innerHTML = error;
+            $('#myModal3').modal('show'); 
+            return false;   
+        }
+        
+
+    }
+</script>
 <script src="js/jquery.js"></script>
 <script src="js/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
 <script src="bs3/js/bootstrap.min.js"></script>
@@ -307,6 +363,7 @@
 <!--clock init-->
 <!--common script init for all pages-->
 <script src="js/scripts.js"></script>
+
 <!--script for this page-->
 </body>
 
